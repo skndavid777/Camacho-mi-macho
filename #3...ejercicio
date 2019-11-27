@@ -1,0 +1,50 @@
+#include<iostream>
+#include<string>
+#include<cstdlib>
+using namespace std;
+//Ejercicio 3
+//___________________________________________Juan Pablo Reyes Herrera_____________________________________________
+int main() {
+	cout << "Ingrese un numero\n";
+	int n;
+	cin >> n;
+	if (n % 2 != 1 && n <= 11 && n >= 3) {
+		cout << "El numero no cumple las especificaciones\n";
+		main();
+	}
+	int matriz[11][11];
+	int columna = n / 2, fila = 0;
+	int aux = 0;
+	for (int i = 1; i <= n * n; i++) {
+		if (n == aux) {
+			fila = fila + 2;
+			columna = columna - 1;
+			aux = 0;
+		}
+		if (fila < 0)
+			fila = n - 1;
+		if (columna > n - 1)
+			columna = 0;
+		matriz[fila][columna] = i;
+		fila--;
+		columna++;
+		aux++;
+	}
+	int aux2;
+	for (int c = 0; c < n; c++)
+	{
+		for (int i = 0; i < n; i++) {
+			cout << matriz[c][i];
+			aux2 = matriz[c][i];
+			if (aux2 < 10)
+				cout << "    ";
+			else {
+				if (aux2 > 99)
+					cout << "  ";
+				else
+					cout << "   ";
+			}
+		}
+		cout << endl;
+	}
+}
