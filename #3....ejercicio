@@ -1,0 +1,57 @@
+#include"librerias.h" 
+#include<iostream>
+#include<string>
+#include<cstdlib>
+using namespace std;
+//EJERCICIO 1;
+/*
+          
+________________________Juan Pablo Reyes Herrera___________________________
+                      
+*/
+int main() {
+	cout << "Ingrese la fecha: ";  //12, enero 2010
+	char dia[4], mes[10], año[5];
+	cin.getline(dia, 4, ' ');     //El texto va a cambiar de variable cada que detecte un espacio
+	cin.getline(mes, 10, ' ');
+	cin.getline(año, 5, '\n');   // Y finalazara cuando detecte un enter
+	int mesInt = 0;    //Mes pero  en forma de numero
+	char aux1 = mes[0];    //Guarda la primera letra del mes para las comparaciones
+	char aux2 = mes[2];    //Guarda las terceras letras para meses como (abril-agosto) (marzo-mayo) (julio-junio)
+	if (aux1 == 'e')
+		mesInt = 1;
+	if (aux1 == 'f')
+		mesInt = 2;
+	if (aux1 == 'm') {
+		if (aux2 == 'r')
+			mesInt = 3;
+		else
+			mesInt = 5;
+	}
+	if (aux1 == 'a') {
+		if (aux2 == 'r')
+			mesInt = 4;
+		else
+			mesInt = 8;
+	}
+	if (aux1 == 'j') {
+		if (aux2 == 'n')
+			mesInt = 5;
+		else
+			mesInt = 6;
+	}
+	if (aux1 == 's')
+		mesInt = 9;
+	if (aux1 == 'o')
+		mesInt = 10;
+	if (aux1 == 'n')
+		mesInt = 11;
+	if (aux1 == 'd')
+		mesInt = 12;
+	int size = strlen(dia) - 1;  //variable para el for
+	for (int i = 0; i < size; i++) {
+		cout << dia[i];          //Este for imprime el numero sin la coma
+	}
+	cout << " " << mesInt << " " << año << endl;  //Imprime el mes en forma numerica y el año
+	system("pause");
+}
