@@ -1,0 +1,27 @@
+//El mejor codigo echo por many ya que ya lo habia echo con la anterior ingeniera :D
+#include <iostream>
+using namespace std;
+int main() 
+{
+	cout << "--------- El Palindromo ---------"<<endl;
+	int I = 0;
+ 	string palabra;
+ 	cout << "Ingrese una palabra: ";
+ 	cin >> palabra;
+ 	int J = palabra.length() - 1;
+ 	int mitad = J / 2;
+ 	while(palabra[I] == palabra[J])
+	{
+  		if(mitad == I)
+		{
+   			cout << "Es palindromo";
+   			break;
+		}
+ 	J--;
+ 	I++;
+ 	}
+ 	if(mitad != I)
+ 	{
+ 		cout << "No es palindromo";
+	}
+}
