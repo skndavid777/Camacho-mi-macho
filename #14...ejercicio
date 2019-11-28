@@ -1,0 +1,17 @@
+#include<iostream>
+
+using namespace std;
+//
+//___________________________Juan Pablo Reyes Herrera__________________________
+int main() {
+	char palabra[50];
+	cout << "Ingrese un texte\n";
+	cin.getline(palabra, 100, '\n');
+	int size = strlen(palabra);
+	for (int c = 0; c < size; c++)
+	{
+		palabra[c] = (palabra[c]) + 3;
+	}
+	cout << "Mensaje encriptado:  " << palabra << '\n';
+	return 0;
+}
