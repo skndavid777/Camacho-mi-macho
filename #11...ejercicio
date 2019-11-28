@@ -1,0 +1,50 @@
+#include<iostream>
+#include<string>
+#include<cstdlib>
+
+//#11...ejercicio
+
+//________________Juan Pablo Reyes Herrera__________________
+
+#include <iostream>
+using namespace std;
+
+void funcioncita(string& s);
+
+int main()
+{
+	int valor[] = { 1000, 500, 100, 50, 10, 5, 1 };
+	string simbolo = "MDCLXVI", cadena;
+	char c;
+	int resultado = 0, posl = 0, posr = 0, ultimovalor = 0;
+	bool valido = true;
+	cout << "Ingrese el Numero en Romano: ";
+	cin >> cadena;
+	funcioncita(cadena);
+	while (valido && (posl < cadena.length()))
+	{
+		c = cadena[posl];
+		posr = simbolo.find(c);
+		if (posr >= 0)
+		{
+			resultado += valor[posr];
+			if (valor[posr] > ultimovalor)
+			{
+				resultado -= 2 * ultimovalor;
+			}
+			ultimovalor = valor[posr];
+		}
+		else
+		{
+			valido = false;
+			resultado = -1;
+		}
+		posl++;
+	}
+	cout << "Resultado: " << resultado << endl;
+}
+void funcioncita(string& s)
+{
+	for (int i = 0; i < s.length(); i++)
+		s[i] = toupper(s[i]);
+}
