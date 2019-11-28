@@ -8,11 +8,11 @@ using namespace std;
 int main()
 {
     float N;
-    float ACUM;
+    float ACUM = 0;
     cout<<"ingrese el numero que desea"<<endl;    cin>>N;
     for(int i=1;i<=N;i++)
     {
-        ACUM=ACUM+(N/(2*N));
+        ACUM=ACUM+(i/(2*i));
     }
 
     cout<<"la suma total es"<<ACUM<<endl;
