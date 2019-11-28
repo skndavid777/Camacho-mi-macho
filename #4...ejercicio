@@ -1,0 +1,21 @@
+//calcular la sua de lso termin0os de la serie 1/2 + 2/22 + 3/23 + ... + n/2n
+
+#include <iostream>
+  //Pedraza
+//#4...ejercicio
+using namespace std;
+
+int main()
+{
+    float N;
+    float ACUM;
+    cout<<"ingrese el numero que desea"<<endl;    cin>>N;
+    for(int i=1;i<=N;i++)
+    {
+        ACUM=ACUM+(N/(2*N));
+    }
+
+    cout<<"la suma total es"<<ACUM<<endl;
+
+    return 0;
+}
