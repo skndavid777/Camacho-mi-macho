@@ -1,0 +1,95 @@
+//escribeun programa que permita al usuario elegir el calculo del area de cualquier de las figuras geometricas ; circulo,cuadrado,rectangulo,triangulo+++++
+#include <iostream>
+#include <math.h>
+
+//#7...ejercicio
+
+using namespace std;
+
+//trototipo de funciones
+
+float areadelcirculo(float );
+float areadecuadrado(float , float);
+float areadelrectangulo(float, float);
+float areadeltriangulo(float , float);
+
+
+float R;  //me va a servir como radio y como altura
+float B;  // base 
+int N;
+float X;
+
+int main()
+{
+    
+    cout<<"para ver el calculo del circulo presione 1 \n para ver el calculo del cuadrado presione 2 \n para ver el calculo del rectangulo presione 3 \n para ver el calculo del triangulo presione 4 \n "<<endl;
+    cin>>N;
+    if(N==1)
+    {
+        X=areadelcirculo(R);
+        cout<<"el area del ciruclo es;"<<X<<endl;
+        
+    }
+        if(N==2)
+    {
+        X=areadecuadrado(R,B);
+        cout<<"el area del cuadrado es;"<<X<<endl;
+        
+    }
+        if(N==3)
+    {
+        X=areadelrectangulo(R,B);
+        cout<<"el area del rectangulo es;"<<X<<endl;
+        
+    }
+        if(N==4)
+    {
+        X=areadeltriangulo(R,B);
+        cout<<"el area del triangulo es;"<<X<<endl;
+        
+    }
+
+    return 0;
+}
+
+// desarrollo de funciones
+float areadelcirculo(float R)
+{
+    float PI=3.1416;
+    float AC=0;
+    cout<<"ingrese el radio del circulo"<<endl;
+    cin>>R;
+    AC=PI*pow(R,2);
+    
+    return AC;
+}
+
+float areadecuadrado(float R, float B)
+{
+    float AE=0;
+    cout<<"ingrese la base y la altura del cuadrado"<<endl;
+    cin>>B>>R;
+    AE=B*R;
+    
+    return AE;
+}
+
+float areadelrectangulo(float R,float B)
+{
+    float AR=0;
+    cout<<"ingrese la base y la altura del rectangulo"<<endl;
+    cin>>B>>R;
+    AR=B*R;
+    
+    return AR;
+}
+
+float areadeltriangulo(float R,float B)
+{
+    float AT=0;
+    cout<<"ingrese la bse y algura del triangulo"<<endl;
+    cin>>B>>R;
+    AT=(R*B)/2;
+    
+    return AT;
+}
