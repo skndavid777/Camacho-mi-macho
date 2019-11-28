@@ -1,0 +1,32 @@
+//calcular todos los numeros de tres cufras tales que la suma de los cubos  de los cifrass se igual al valor del numero
+#include <iostream>
+#include <conio.h>
+#include <math.h>
+
+//6...ejercicio
+//  Pedraza
+
+using namespace std;
+
+
+int main()
+{
+ int CENTENA,DECENA,UNIDAD,AUX,suma;
+ for(int i=100;i<=999;i++)
+ {
+     UNIDAD=i%10;
+     AUX=i/10;
+     DECENA=AUX%10;
+     CENTENA=AUX/10;
+     suma=(pow(UNIDAD,3))+(pow(DECENA,3))+(pow(CENTENA,3));
+     
+     if(suma==i)
+     {
+           cout<<i<<"="<<suma<<endl;
+     }
+   
+     
+ }
+ 
+    return 0;
+}
