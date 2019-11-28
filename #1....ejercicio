@@ -49,9 +49,13 @@ int main() {
 	if (aux1 == 'd')
 		mesInt = 12;
 	int size = strlen(dia) - 1;  //variable para el for
-	for (int i = 0; i < size; i++) {
+	if(dia[size] == ',') {
+		for (int i = 0; i < size; i++) {
 		cout << dia[i];          //Este for imprime el numero sin la coma
+		}
 	}
+	else 
+	   cout << dia;
 	cout << " " << mesInt << " " << año << endl;  //Imprime el mes en forma numerica y el año
 	system("pause");
 }
