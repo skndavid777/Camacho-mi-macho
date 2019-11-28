@@ -1,0 +1,32 @@
+//escribir un programa que deterimne si un ano es bisiesto, un ano es bisiesto si es multiplo de 4 (1988) exceoti los multiplos de 100 que no son bisiesto
+//salvo que a su ves tsambien sean multiplos cde 400(1800 no es bisiestop 2000 si)
+
+#include <iostream>
+
+//    pedraza
+//#5...ejercicio
+
+using namespace std;
+
+int main()
+{
+    int N; 
+    int ACUM;
+    cout<<"ingrese el ano que desea saber si es bisiesto o no"<<endl;    cin>>N;
+    ACUM=N;
+    while (N>=0)
+    {
+        if(N%4==0)
+        {
+            cout<<"el ano si es bisiesto"<<endl;
+        }
+        else
+        {
+            cout<<"no es bisiesto"<<endl;
+        }
+        
+        break;
+    }
+    system("pause");
+    return 0;
+}
