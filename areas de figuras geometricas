@@ -1,0 +1,82 @@
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+void menu();
+int cuadrado(int A1);
+int rectangulo (int A2);
+float triangulo(float A3);
+float círculo(float A4);
+int _tmain(int argc, _TCHAR* argv[])
+{	int opc;
+	float Area=0;
+	menu();
+	do
+	{
+
+	
+	 cin>>opc;
+	 if (opc==1)
+	 {
+     Area=cuadrado(Area);
+	 cout<<"el area es "<<Area<<"m^2"<<endl;
+	 }
+	 if (opc==2)
+	 {
+		 Area=rectangulo(Area);
+		 cout<<"el area es "<<Area<<"m^2"<<endl;
+	 }
+	 if (opc==3)
+	 {
+		 Area=triangulo(Area);
+		 cout<<"el area es "<<Area<<"m^2"<<endl;
+	 }
+	 if (opc==4)
+	 {
+		 Area=círculo(Area);
+		 cout<<"el area es "<<Area<<"m^2"<<endl;
+	 }
+	 } while (opc>4);//pide que digite otra opcion
+	                //hasta que digite una opcion valida
+	system("pause");
+	return 0;
+}
+void menu()
+{
+	cout<<"ELEGIR UNA OPCION"<<endl;
+	cout<<"1.Area de un cuadrado"<<endl;
+	cout<<"2.Area de un rectangulo"<<endl;
+	cout<<"3.Area de un triangulo"<<endl;
+	cout<<"4.Area de un circulo"<<endl;
+}
+int cuadrado(int A1)
+{
+	int b,h; 
+	cout<<"digite la base y la altura en m";
+	cin>>b>>h;
+	A1=b*h;
+	return A1;
+}
+int rectangulo(int A2)
+{
+	int b,h;  
+	cout<<"digite la base y la altura en m";
+	cin>>b>>h;
+	A2=b*h;
+	return A2;
+}
+float triangulo(float A3)
+{
+	float b,h;  
+	cout<<"digite la base y la altura en m";
+	cin>>b>>h;
+	A3=(b*h)/2;
+	return A3;
+}
+float círculo(float A4)
+{
+	float rad,pi=3.1416;
+	cout<<"digite el radio"<<endl;
+	cin>>rad;
+	A4=pi*rad*rad;
+	return A4;
+}
